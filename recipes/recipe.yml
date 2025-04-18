@@ -80,7 +80,7 @@ modules:
       source: ghcr.io/blue-build/modules/dnf:dnf-module
       install:
         packages:
-        - repo: solopasha/hyprland
+        - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
           packages:
             - hyprland
             - hyprpaper
