@@ -9,14 +9,6 @@ description: This is my personal OS image.
 base-image: ghcr.io/wayblueorg/hyprland-nvidia
 image-version: latest # latest is also supported if you want new updates ASAP
 
-# stages:
-#     - name: astal
-#       from: ubuntu:25.04
-#       modules:
-#           - type: script
-#             scripts:
-#                 - buildastal.sh
-
 stages:
     - name: nwg-dock
       # from: golang:1.24
@@ -54,6 +46,9 @@ modules:
       install:
           - hyprpolkitagent
           - satty
+          - hyprpaper
+          - hypridle
+          - hyprlock
           - aylurs-gtk-shell2
           - cliphist
           - astal
@@ -101,8 +96,6 @@ modules:
     - type: script
       scripts:
           - installvial.sh
-          # - installfisher.sh
-          # - installhyprlandplugins.sh
 
     - type: fonts
       fonts:
@@ -118,10 +111,6 @@ modules:
     - type: justfiles
       validate: true
 
-    # - type: copy
-    #   from: astal
-    #   src: /usr/bin
-    #   dest: /usr/bin
     - type: copy
       from: nwg-dock
       src: bin/nwg-dock-hyprland
