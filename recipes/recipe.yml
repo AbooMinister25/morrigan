@@ -39,6 +39,7 @@ modules:
           - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
           - waybar
           - dunst
+          - hyprland
 
     - type: rpm-ostree
       repos:
@@ -55,6 +56,7 @@ modules:
           - astal-gjs
           - astal-gtk4
           - hyprpanel
+          - hyprland
 
     - type: rpm-ostree
       repos:
