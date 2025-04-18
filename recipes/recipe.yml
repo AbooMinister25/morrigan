@@ -47,16 +47,16 @@ modules:
       install:
           - hyprpolkitagent
           - satty
-          - hyprpaper
-          - hypridle
-          - hyprlock
+          # - hyprpaper
+          # - hypridle
+          # - hyprlock
           - aylurs-gtk-shell2
           - cliphist
           - astal
           - astal-gjs
           - astal-gtk4
           - hyprpanel
-          - hyprland
+          # - hyprland
 
     - type: rpm-ostree
       repos:
@@ -75,6 +75,18 @@ modules:
           - vscode.repo
       install:
           - code
+    
+    - type: dnf
+      source: ghcr.io/blue-build/modules/dnf:dnf-module
+      install:
+        packages:
+        - repo: solopasha/hyprland
+          packages:
+            - hyprland
+            - hyprpaper
+            - hypridle
+            - hyprlock
+
 
     - type: default-flatpaks
       notify: true # Send notification after install/uninstall is finished (true/false)
