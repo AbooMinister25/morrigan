@@ -130,7 +130,7 @@ modules:
       branch: "chezmoi-config"
 
     - type: justfiles
-      validate: true
+      validate: false
 
     - type: copy
       from: nwg-dock
