@@ -65,8 +65,8 @@ modules:
                 - hyprlock
                 - hypridle
                 - hyprgraphics
-                - hyprland
                 - aquamarine
+                - hyprlang
                 - hyprpicker
 
     - type: rpm-ostree
