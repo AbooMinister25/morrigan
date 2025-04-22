@@ -1,12 +1,12 @@
 # Install everforest-cursors
 
-theme_text := (
-    '[Icon Theme]' +
-    'Name=Default' +
-    'Comment=Default Cursor Theme' +
-    'Inherits=everforest-cursors' +
-    'EOF'    
-)
+theme_text := '''
+[Icon Theme]
+Name=Default
+Comment=Default Cursor Theme
+Inherits=everforest-cursors
+EOF  
+'''
 
 install-cursors:
     #!/usr/bin/env bash
