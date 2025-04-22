@@ -77,12 +77,6 @@ modules:
 
     - type: rpm-ostree
       repos:
-          - https://copr.fedorainfracloud.org/coprs/markupstart/nwg-shell/repo/fedora-%OS_VERSION%/markupstart-nwg-shell-fedora-%OS_VERSION%.repo
-      install:
-          - nwg-look
-
-    - type: rpm-ostree
-      repos:
           - vscode.repo
       install:
           - code
