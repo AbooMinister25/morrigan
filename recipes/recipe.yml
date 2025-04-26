@@ -11,7 +11,6 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 
 stages:
     - name: nwg-dock
-      # from: golang:1.24
       from: fedora:latest
       modules:
           - type: script
@@ -34,6 +33,7 @@ modules:
           - cmake
           - meson
           - gcc-c++
+          - hyprland-devel
       remove:
           - firefox
           - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
@@ -81,20 +81,6 @@ modules:
       install:
           - code
 
-    # - type: dnf
-    #   source: ghcr.io/blue-build/modules/dnf:dnf-module
-    #   repos:
-    #     copr:
-    #       enable: solopasha/hyprland
-    #   install:
-    #     packages:
-    #     - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
-    #       packages:
-    #         - hyprland
-    #         - hyprpaper
-    #         - hypridle
-    #         - hyprlock
-
     - type: default-flatpaks
       notify: true # Send notification after install/uninstall is finished (true/false)
       system:
@@ -130,7 +116,7 @@ modules:
       branch: "chezmoi-config"
 
     - type: justfiles
-      validate: false
+      validate: true
 
     - type: copy
       from: nwg-dock
@@ -139,6 +125,6 @@ modules:
     - type: copy
       from: nwg-dock
       src: /usr/share/nwg-dock-hyprland
-      dest: /usr/share/
+      dest: /usr/share/nwg-dock-hyprland
 
     - type: signing # this sets up the proper policy & signing files for signed images to work fully

@@ -5,8 +5,9 @@ fix-hyprpm:
     toolbox create hyprpm
     toolbox enter hyprpm
     sudo dnf -y install hyprland hyprland-devel
-
-    fish -c "alias --save hyprpm='toolbox run -c hyprpm env HYPRLAND_INSTANCE_SIGNATURE=\"$HYPRLAND_INSTANCE_SIGNATURE\" hyprpm'"
+    sudo dnf -y copr enable solopasha/hyprland
+    sudo dnf -y swap aquamarine aquamarine
+    exit
 
 install-hyprland-plugins:
     #!/usr/bin/env bash
