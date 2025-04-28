@@ -10,8 +10,8 @@ set -oue pipefail
 # mkdir -p "$TMP_DIR"
 # cd "$TMP_DIR"
 
-curl -O https://github.com/vial-kb/vial-gui/releases/download/v0.7.3/Vial-v0.7.3-x86_64.AppImage
-chmod a+x "Vial-v0.7.3-x86_64.AppImage"
+curl -O -L https://github.com/vial-kb/vial-gui/releases/download/v0.7.3/Vial-v0.7.3-x86_64.AppImage
+chmod a+x Vial-v0.7.3-x86_64.AppImage
 mv "Vial-v0.7.3-x86_64.AppImage" /bin
 
 # mkdir -p "$INSTALL_BIN_DIR"

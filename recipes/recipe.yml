@@ -22,6 +22,12 @@ stages:
         - type: script
           scripts:
             - installvial.sh
+    - name: anyrun
+      from: fedora: latest
+      modules:
+        - type: script
+          scripts:
+            - installanyrun.sh
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -110,10 +116,6 @@ modules:
               - com.spotify.Client
               - com.bitwarden.desktop
 
-    # - type: script
-    #   scripts:
-    #       - installvial.sh
-
     - type: fonts
       fonts:
           nerd-fonts:
@@ -140,6 +142,9 @@ modules:
       from: vial
       src: bin/Vial-v0.7.3-x86_64.AppImage
       dest: /usr/bin/
+    - type: copy
+      from: anyrun
+      src: 
     
     - type: files
       files:
