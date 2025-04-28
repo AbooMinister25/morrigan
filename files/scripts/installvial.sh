@@ -12,6 +12,8 @@ set -oue pipefail
 
 curl -O https://github.com/vial-kb/vial-gui/releases/download/v0.7.3/Vial-v0.7.3-x86_64.AppImage
 chmod a+x "Vial-v0.7.3-x86_64.AppImage"
+mkdir /bin
+mv "Vial-v0.7.3-x86_64.AppImage" /bin
 
 # mkdir -p "$INSTALL_BIN_DIR"
 # mv "Vial-v0.7.3-x86_64.AppImage" "$INSTALL_BIN_DIR"

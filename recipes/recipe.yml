@@ -138,7 +138,7 @@ modules:
       dest: /usr/share/nwg-dock-hyprland
     - type: copy
       from: vial
-      src: Vial-v0.7.3-x86_64.AppImage
+      src: bin/Vial-v0.7.3-x86_64.AppImage
       dest: /usr/bin/
     
     - type: files
