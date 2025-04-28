@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Version=0.7.3
+Name=Vial
+Comment=QMK fork for configuring your keyboard in real time
+Exec=/usr/bin/Vial-v0.7.3-x86_64.AppImage

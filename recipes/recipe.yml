@@ -16,6 +16,12 @@ stages:
           - type: script
             scripts:
                 - installdock.sh
+    - name: vial
+      from: fedora:latest
+      modules:
+        - type: script
+          scripts:
+            - installvial.sh
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -29,6 +35,7 @@ modules:
       install:
           - fish
           - xdg-desktop-portal-gtk
+          - wf-recorder
           # Dependencies for hyprpm
           - cmake
           - meson
@@ -38,6 +45,9 @@ modules:
           - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
           - waybar
           - dunst
+          - swalock
+          - swayidle
+          - swaybg
 
     - type: rpm-ostree
       repos:
@@ -67,6 +77,7 @@ modules:
                 - aquamarine
                 - hyprlang
                 - hyprpicker
+                - hyprsunset
 
     - type: rpm-ostree
       repos:
@@ -99,9 +110,9 @@ modules:
               - com.spotify.Client
               - com.bitwarden.desktop
 
-    - type: script
-      scripts:
-          - installvial.sh
+    # - type: script
+    #   scripts:
+    #       - installvial.sh
 
     - type: fonts
       fonts:
@@ -125,5 +136,14 @@ modules:
       from: nwg-dock
       src: /usr/share/nwg-dock-hyprland
       dest: /usr/share/nwg-dock-hyprland
+    - type: copy
+      from: vial
+      src: Vial-v0.7.3-x86_64.AppImage
+      dest: /usr/bin/
+    
+    - type: files
+      files:
+        - source: system/usr
+          destinations: /usr
 
     - type: signing # this sets up the proper policy & signing files for signed images to work fully

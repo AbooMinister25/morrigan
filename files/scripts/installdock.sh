@@ -3,11 +3,8 @@
 # Tell build process to exit if there are any errors.
 set -oue pipefail
 
-# apt-get install -y git
-
 dnf install -y git
 dnf install -y golang
-
 
 git clone https://github.com/nwg-piotr/nwg-dock-hyprland
 cd nwg-dock-hyprland
