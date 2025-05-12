@@ -19,7 +19,7 @@
  */
 
 import QtQuick 2.2
-import QtQuick.Controls 5.15
+import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.1
 import SddmComponents 2.0
 
