@@ -33,7 +33,7 @@ install:
         - astal-gjs
         - astal-gtk4
         - hyprpanel
-    
+
     - repo: copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly
       packages:
         - wezterm
