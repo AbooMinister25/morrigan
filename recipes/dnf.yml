@@ -1,0 +1,62 @@
+type: dnf
+repos:
+  files:
+    - vscode.repo
+  copr:
+    - solopasha/hyprland
+    - wezfurlong/wezterm-nightly
+  nonfree: rpmfusion
+install:
+  packages:
+    # Important system stuff
+    - fish
+    - xdg-desktop-portal-gtk
+    - wf-recorder
+    # Dependencies for hyprpm
+    - cmake
+    - meson
+    - gcc-c++
+    - hyprland-devel
+
+    - repo: vscode
+      packages:
+        - code
+
+    - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
+      packages:
+        - hyprland-qt-support
+        - hyprpolkitagent
+        - satty
+        - aylurs-gtk-shell2
+        - cliphist
+        - astal
+        - astal-gjs
+        - astal-gtk4
+        - hyprpanel
+    
+    - repo: copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly
+      packages:
+        - wezterm
+replace:
+  - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
+    packages:
+      - hyprland
+      - hyprutils
+      - xdg-desktop-portal-hyprland
+      - hyprpaper
+      - hyprlock
+      - hypridle
+      - hyprgraphics
+      - aquamarine
+      - hyprland
+      - hyprpicker
+      - hyprsunset
+remove:
+  packages:
+    - firefox
+    - firefox-langpacks
+    - waybar
+    - dunst
+    - swaylock
+    - swayidle
+    - swaybg
