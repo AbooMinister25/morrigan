@@ -1,5 +1,5 @@
 [code]
-name=Visual Studio Code
+name=vscode
 baseurl=https://packages.microsoft.com/yumrepos/vscode
 enabled=1
 gpgcheck=1
