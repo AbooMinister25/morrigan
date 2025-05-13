@@ -18,7 +18,7 @@ install:
     - gcc-c++
     - hyprland-devel
 
-    - repo: vscode-yum
+    - repo: vscode.repo
       packages:
         - code
 
