@@ -1,5 +1,6 @@
 type: dnf
 repos:
+  cleanup: true
   files:
     - vscode.repo
   copr:
@@ -18,7 +19,7 @@ install:
     - gcc-c++
     - hyprland-devel
 
-    - repo: vscode.repo
+    - repo: vscode-yum
       packages:
         - code
 
