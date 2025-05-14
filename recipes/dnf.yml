@@ -18,13 +18,7 @@ install:
     - meson
     - gcc-c++
     - hyprland-devel
-
-    - repo: code
-      packages:
-        - code
-
-    # - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
-    #   packages:
+    # Hyprland stuff
     - hyprland-qt-support
     - hyprpolkitagent
     - satty
@@ -40,6 +34,10 @@ install:
     - hyprpicker
     - hyprsunset
 
+    - repo: code
+      packages:
+        - code
+
     - repo: copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly
       packages:
         - wezterm
@@ -49,14 +47,9 @@ replace:
       - hyprland
       - hyprutils
       - xdg-desktop-portal-hyprland
-      # - hyprpaper
-      # - hyprlock
-      # - hypridle
       - hyprgraphics
       - aquamarine
       - hyprland
-      # - hyprpicker
-      # - hyprsunset
 remove:
   packages:
     - firefox
