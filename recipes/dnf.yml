@@ -23,17 +23,17 @@ install:
       packages:
         - code
 
-    - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
-      packages:
-        - hyprland-qt-support
-        - hyprpolkitagent
-        - satty
-        - aylurs-gtk-shell2
-        - cliphist
-        - astal
-        - astal-gjs
-        - astal-gtk4
-        - hyprpanel
+    # - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
+    #   packages:
+    - hyprland-qt-support
+    - hyprpolkitagent
+    - satty
+    - aylurs-gtk-shell2
+    - cliphist
+    - astal
+    - astal-gjs
+    - astal-gtk4
+    - hyprpanel
 
     - repo: copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly
       packages:
