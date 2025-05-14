@@ -34,6 +34,11 @@ install:
     - astal-gjs
     - astal-gtk4
     - hyprpanel
+    - hyprpaper
+    - hyprlock
+    - hypridle
+    - hyprpicker
+    - hyprsunset
 
     - repo: copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly
       packages:
@@ -44,14 +49,14 @@ replace:
       - hyprland
       - hyprutils
       - xdg-desktop-portal-hyprland
-      - hyprpaper
-      - hyprlock
-      - hypridle
+      # - hyprpaper
+      # - hyprlock
+      # - hypridle
       - hyprgraphics
       - aquamarine
       - hyprland
-      - hyprpicker
-      - hyprsunset
+      # - hyprpicker
+      # - hyprsunset
 remove:
   packages:
     - firefox
