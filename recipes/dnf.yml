@@ -39,7 +39,7 @@ install:
     - qt6-qtvirtualkeyboard
     - qt6-qtmultimedia
     # NWG
-    nwg-look
+    - nwg-look
 
     - repo: code
       packages:
