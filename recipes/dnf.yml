@@ -33,6 +33,10 @@ install:
     - hypridle
     - hyprpicker
     - hyprsunset
+    # SDDM THeme
+    - qt6-qtsvg
+    - qt6-qtvirtualkeyboard
+    - qt6-qtmultimedia
 
     - repo: code
       packages:
