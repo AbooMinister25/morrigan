@@ -6,6 +6,7 @@ repos:
   copr:
     - solopasha/hyprland
     - wezfurlong/wezterm-nightly
+    - tofik/nwg-shell
   nonfree: rpmfusion
 install:
   packages:
@@ -37,6 +38,8 @@ install:
     - qt6-qtsvg
     - qt6-qtvirtualkeyboard
     - qt6-qtmultimedia
+    # NWG
+    nwg-look
 
     - repo: code
       packages:
