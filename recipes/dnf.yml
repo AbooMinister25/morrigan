@@ -40,6 +40,8 @@ install:
     - qt6-qtmultimedia
     # NWG
     - nwg-look
+    # Launcher
+    - ulauncher
 
     - repo: code
       packages:
