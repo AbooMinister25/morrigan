@@ -1,0 +1,17 @@
+Config(
+  x: Fraction(0.5),
+  y: Fraction(0.2),
+  width: Absolute(600),
+  hide_plugin_info: true, 
+  show_results_immediately: true,
+  max_entries: 8,
+  
+  // List of plugins to be loaded by default, can be specified with a relative path to be loaded from the
+  // `<anyrun config dir>/plugins` directory or with an absolute path to just load the file the path points to.
+  plugins: [
+    "libapplications.so",
+    "libsymbols.so",
+    "libshell.so",
+    "libtranslate.so",
+  ],
+)

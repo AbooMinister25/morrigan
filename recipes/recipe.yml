@@ -22,6 +22,12 @@ stages:
         - type: script
           scripts:
             - installvial.sh
+    - name: anyrun
+      from: fedora:latest
+      modules:
+          - type: script
+            scripts:
+                - installanyrun.sh
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -77,10 +83,20 @@ modules:
       from: vial
       src: bin/Vial-v0.7.3-x86_64.AppImage
       dest: /usr/bin/
+    - type: copy
+      from: anyrun
+      src: bin/anyrun
+      dest: /usr/bin
+    - type: copy
+      from: anyrun
+      src: plugins/
+      dest: /etc/anyrun/
 
     - type: files
       files:
         - source: system/usr
           destinations: /usr
+        - source: system/etc/anyrun
+          destination: /etc/anyrun/
 
     - type: signing # this sets up the proper policy & signing files for signed images to work fully
