@@ -12,5 +12,5 @@ cd anyrun
 cargo build --release
 cargo install --path anyrun/ --root bin/
 
-mkdir plugins
-cp target/release/*.so ./plugins
+mkdir compiled_plugins
+cp target/release/*.so ./compiled_plugins

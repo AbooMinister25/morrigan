@@ -89,7 +89,7 @@ modules:
       dest: /usr/bin
     - type: copy
       from: anyrun
-      src: plugins/
+      src: compiled_plugins/
       dest: /etc/anyrun/
 
     - type: files
