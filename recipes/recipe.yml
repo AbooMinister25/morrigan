@@ -85,7 +85,7 @@ modules:
       dest: /usr/bin/
     - type: copy
       from: anyrun
-      src: bin/anyrun
+      src: bin/bin/anyrun
       dest: /usr/bin
     - type: copy
       from: anyrun
