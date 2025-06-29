@@ -3,6 +3,7 @@ repos:
   cleanup: true
   files:
     - vscode.repo
+    - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
   copr:
     - solopasha/hyprland
     - wezfurlong/wezterm-nightly
@@ -50,6 +51,11 @@ install:
     - repo: copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly
       packages:
         - wezterm
+    
+    - repo: terra
+      packages: 
+        - zed
+    
 replace:
   - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
     packages:
