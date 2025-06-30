@@ -26,7 +26,7 @@ install:
     - satty
     - aylurs-gtk-shell2
     - cliphist
-    - astal
+    # - astal
     - astal-gjs
     - astal-gtk4
     - hyprpanel
@@ -43,6 +43,10 @@ install:
     - nwg-look
     # Launcher
     - ulauncher
+
+    - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
+      packages:
+        - astal
 
     - repo: code
       packages:
