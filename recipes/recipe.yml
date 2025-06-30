@@ -83,14 +83,14 @@ modules:
       from: vial
       src: bin/Vial-v0.7.3-x86_64.AppImage
       dest: /usr/bin/
-    - type: copy
-      from: anyrun
-      src: bin/bin/anyrun
-      dest: /usr/bin
-    - type: copy
-      from: anyrun
-      src: compiled_plugins/
-      dest: /etc/anyrun/
+    # - type: copy
+    #   from: anyrun
+    #   src: bin/bin/anyrun
+    #   dest: /usr/bin
+    # - type: copy
+    #   from: anyrun
+    #   src: compiled_plugins/
+    #   dest: /etc/anyrun/
 
     - type: files
       files:
