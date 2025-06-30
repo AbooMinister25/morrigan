@@ -3,7 +3,6 @@ repos:
   cleanup: true
   files:
     - vscode.repo
-    - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
   copr:
     - solopasha/hyprland
     - wezfurlong/wezterm-nightly
@@ -26,9 +25,9 @@ install:
     - satty
     - aylurs-gtk-shell2
     - cliphist
-    # - astal
-    # - astal-gjs
-    # - astal-gtk4
+    - astal
+    - astal-gjs
+    - astal-gtk4
     - hyprpanel
     - hyprpaper
     - hyprlock
@@ -42,13 +41,7 @@ install:
     # NWG
     - nwg-look
     # Launcher
-    - ulauncher
-
-    - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
-      packages:
-        - astal
-        - astal-gjs
-        - astal-gtk4
+    - ulauncher        
 
     - repo: code
       packages:
@@ -57,10 +50,6 @@ install:
     - repo: copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly
       packages:
         - wezterm
-    
-    - repo: terra
-      packages: 
-        - zed
     
 replace:
   - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland

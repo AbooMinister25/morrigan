@@ -63,6 +63,12 @@ modules:
               - FiraCode
               - Iosevka
               - JetBrainsMono
+    
+    - type: rpm-ostree
+      repos:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      install:
+        - zed
 
     - type: chezmoi
       repository: "https://github.com/AbooMinister25/dotfiles"
