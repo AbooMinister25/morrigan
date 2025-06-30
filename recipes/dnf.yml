@@ -27,8 +27,8 @@ install:
     - aylurs-gtk-shell2
     - cliphist
     # - astal
-    - astal-gjs
-    - astal-gtk4
+    # - astal-gjs
+    # - astal-gtk4
     - hyprpanel
     - hyprpaper
     - hyprlock
@@ -47,6 +47,8 @@ install:
     - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
       packages:
         - astal
+        - astal-gjs
+        - astal-gtk4
 
     - repo: code
       packages:
